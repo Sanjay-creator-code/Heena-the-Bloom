@@ -1,0 +1,2386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Henna the Bloom | Anjali Soni – Mehndi Artist, Jaora, MP</title>
+<meta name="description" content="Henna the Bloom by Anjali Soni – Professional Mehndi Artist in Jaora, Madhya Pradesh. Bridal, Groom, Engagement & Baby Shower Mehndi. 5+ Years Experience, 100+ Happy Clients.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Cinzel+Decorative:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  /* ===========================
+     CSS VARIABLES & RESET
+  =========================== */
+  :root {
+    --maroon: #6B1F2A;
+    --deep-maroon: #4A0F17;
+    --gold: #C8972A;
+    --gold-light: #E8BA4A;
+    --gold-pale: #F5DFA0;
+    --beige: #F7F0E4;
+    --cream: #FDF8F0;
+    --brown: #5C3A1E;
+    --brown-light: #8B5E3C;
+    --brown-pale: #D4B896;
+    --text-dark: #2A1008;
+    --text-mid: #5C3A1E;
+    --text-light: #9A7B5A;
+    --white: #FFFEF9;
+    --shadow: rgba(74,15,23,0.15);
+    --shadow-gold: rgba(200,151,42,0.3);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+
+  /* ===========================
+     ORNAMENT & PATTERN HELPERS
+  =========================== */
+  .mandala-bg {
+    background-image:
+      radial-gradient(ellipse at 20% 20%, rgba(200,151,42,0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 80%, rgba(107,31,42,0.08) 0%, transparent 50%),
+      url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23C8972A' stroke-width='0.3' opacity='0.25'%3E%3Ccircle cx='40' cy='40' r='35'/%3E%3Ccircle cx='40' cy='40' r='25'/%3E%3Ccircle cx='40' cy='40' r='15'/%3E%3Cpath d='M40 5 L40 75 M5 40 L75 40 M12 12 L68 68 M68 12 L12 68'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .leaf-divider {
+    text-align: center;
+    color: var(--gold);
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+    padding: 1rem 0;
+    opacity: 0.8;
+  }
+
+  .section-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .section-ornament::before,
+  .section-ornament::after {
+    content: '';
+    flex: 1;
+    max-width: 120px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold));
+  }
+  .section-ornament::after {
+    background: linear-gradient(90deg, var(--gold), transparent);
+  }
+  .section-ornament span {
+    font-size: 1.4rem;
+    color: var(--gold);
+  }
+
+  /* ===========================
+     NAVIGATION
+  =========================== */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: rgba(253,248,240,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(200,151,42,0.25);
+    box-shadow: 0 2px 20px var(--shadow);
+    transition: all 0.3s ease;
+  }
+
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+  }
+
+  .nav-logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    text-decoration: none;
+  }
+  .nav-logo-main {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.1rem;
+    color: var(--maroon);
+    letter-spacing: 0.05em;
+  }
+  .nav-logo-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.75rem;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 0.25rem;
+  }
+
+  .nav-menu li { position: relative; }
+
+  .nav-menu a {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    display: block;
+    transition: color 0.3s;
+    position: relative;
+  }
+  .nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; left: 50%; right: 50%;
+    height: 1px;
+    background: var(--gold);
+    transition: all 0.3s;
+  }
+  .nav-menu a:hover { color: var(--maroon); }
+  .nav-menu a:hover::after { left: 0.9rem; right: 0.9rem; }
+
+  /* Dropdown */
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 220px;
+    background: var(--white);
+    border: 1px solid rgba(200,151,42,0.3);
+    border-top: 2px solid var(--gold);
+    box-shadow: 0 10px 30px var(--shadow);
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) translateY(8px);
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+    border-radius: 0 0 8px 8px;
+  }
+  .nav-menu li:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+  .dropdown-menu a {
+    font-size: 0.78rem;
+    padding: 0.6rem 1.2rem;
+    color: var(--text-mid);
+    white-space: nowrap;
+  }
+  .dropdown-menu a:hover { background: var(--beige); color: var(--maroon); }
+  .dropdown-menu a::after { display: none; }
+
+  .dropdown-arrow { font-size: 0.6rem; margin-left: 4px; }
+
+  /* Hamburger */
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--maroon);
+    transition: all 0.3s;
+  }
+
+  .nav-cta {
+    background: var(--maroon) !important;
+    color: var(--white) !important;
+    border-radius: 25px;
+    padding: 0.45rem 1.2rem !important;
+    letter-spacing: 0.08em;
+  }
+  .nav-cta:hover { background: var(--deep-maroon) !important; color: var(--gold-pale) !important; }
+  .nav-cta::after { display: none !important; }
+
+  /* ===========================
+     PAGES SYSTEM
+  =========================== */
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* ===========================
+     HERO SECTION
+  =========================== */
+  .hero {
+    min-height: 100vh;
+    background:
+      linear-gradient(135deg, rgba(74,15,23,0.85) 0%, rgba(44,10,14,0.75) 50%, rgba(92,58,30,0.70) 100%),
+      url("data:image/svg+xml,%3Csvg width='400' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3CradialGradient id='rg' cx='50%25' cy='50%25' r='50%25'%3E%3Cstop offset='0%25' stop-color='%23C8972A' stop-opacity='0.4'/%3E%3Cstop offset='100%25' stop-color='%234A0F17' stop-opacity='0.8'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='400' height='400' fill='url(%23rg)'/%3E%3Cg stroke='%23C8972A' stroke-width='0.5' fill='none' opacity='0.5'%3E%3Ccircle cx='200' cy='200' r='180'/%3E%3Ccircle cx='200' cy='200' r='140'/%3E%3Ccircle cx='200' cy='200' r='100'/%3E%3Ccircle cx='200' cy='200' r='60'/%3E%3Ccircle cx='200' cy='200' r='20'/%3E%3Cpath d='M200 20 L200 380 M20 200 L380 200 M57 57 L343 343 M343 57 L57 343'/%3E%3Cpath d='M200 20 L220 70 L200 50 L180 70 Z M200 380 L220 330 L200 350 L180 330 Z M20 200 L70 220 L50 200 L70 180 Z M380 200 L330 220 L350 200 L330 180 Z'/%3E%3C/g%3E%3C/svg%3E") center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 70px;
+  }
+
+  .hero-mandala {
+    position: absolute;
+    inset: 0;
+    opacity: 0.06;
+    background-image: url("data:image/svg+xml,%3Csvg width='600' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='%23F5DFA0' stroke-width='1' fill='none'%3E%3Ccircle cx='300' cy='300' r='280'/%3E%3Ccircle cx='300' cy='300' r='240'/%3E%3Ccircle cx='300' cy='300' r='200'/%3E%3Ccircle cx='300' cy='300' r='160'/%3E%3Ccircle cx='300' cy='300' r='120'/%3E%3Ccircle cx='300' cy='300' r='80'/%3E%3Ccircle cx='300' cy='300' r='40'/%3E%3Cpath d='M300 20 L300 580 M20 300 L580 300 M91 91 L509 509 M509 91 L91 509 M300 20 L316 60 L300 40 L284 60 Z M300 580 L316 540 L300 560 L284 540 Z M20 300 L60 316 L40 300 L60 284 Z M580 300 L540 316 L560 300 L540 284 Z'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    animation: slow-rotate 60s linear infinite;
+  }
+
+  @keyframes slow-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--white);
+    padding: 3rem 2rem;
+    max-width: 800px;
+    animation: fadeUp 1s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 1rem;
+    animation: fadeUp 1s 0.2s ease both;
+  }
+
+  .hero-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    line-height: 1.15;
+    color: var(--white);
+    text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    margin-bottom: 0.5rem;
+    animation: fadeUp 1s 0.4s ease both;
+  }
+
+  .hero-title span {
+    color: var(--gold-light);
+    display: block;
+    font-size: 0.6em;
+    letter-spacing: 0.2em;
+  }
+
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1rem, 2.5vw, 1.35rem);
+    color: var(--brown-pale);
+    margin: 1.5rem auto;
+    max-width: 560px;
+    line-height: 1.7;
+    animation: fadeUp 1s 0.6s ease both;
+  }
+
+  .hero-ornament {
+    font-size: 2rem;
+    color: var(--gold);
+    letter-spacing: 0.5rem;
+    margin: 1rem 0;
+    animation: fadeUp 1s 0.8s ease both;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    animation: fadeUp 1s 1s ease both;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.9rem 2.2rem;
+    border-radius: 50px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.35s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--deep-maroon);
+    border-color: var(--gold);
+    box-shadow: 0 4px 20px rgba(200,151,42,0.4);
+  }
+  .btn-primary:hover {
+    background: var(--gold-light);
+    box-shadow: 0 8px 30px rgba(200,151,42,0.6);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border-color: rgba(255,255,255,0.5);
+  }
+  .btn-secondary:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: var(--gold-light);
+    color: var(--gold-light);
+    transform: translateY(-2px);
+  }
+
+  .btn-maroon {
+    background: var(--maroon);
+    color: var(--white);
+    border-color: var(--maroon);
+  }
+  .btn-maroon:hover {
+    background: var(--deep-maroon);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(74,15,23,0.4);
+  }
+
+  .btn-outline-gold {
+    background: transparent;
+    color: var(--gold);
+    border-color: var(--gold);
+  }
+  .btn-outline-gold:hover {
+    background: var(--gold);
+    color: var(--deep-maroon);
+    transform: translateY(-2px);
+  }
+
+  /* Scroll indicator */
+  .scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--gold-light);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    animation: pulse-fade 2s infinite;
+  }
+  .scroll-hint::after {
+    content: '';
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(var(--gold-light), transparent);
+    animation: scroll-line 2s infinite;
+  }
+  @keyframes scroll-line {
+    0% { transform: scaleY(0); transform-origin: top; }
+    50% { transform: scaleY(1); transform-origin: top; }
+    51% { transform: scaleY(1); transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; }
+  }
+  @keyframes pulse-fade {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+  }
+
+  /* ===========================
+     SECTION COMMONS
+  =========================== */
+  section { padding: 6rem 2rem; }
+  .container { max-width: 1200px; margin: 0 auto; }
+
+  .section-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    text-align: center;
+  }
+
+  .section-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(1.5rem, 4vw, 2.4rem);
+    color: var(--maroon);
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+
+  .section-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: var(--text-light);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    line-height: 1.7;
+    font-style: italic;
+  }
+
+  /* ===========================
+     INTRO / ABOUT SNIPPET
+  =========================== */
+  .intro-section {
+    background: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .intro-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(200,151,42,0.06), transparent 70%);
+    pointer-events: none;
+  }
+
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .intro-image-wrap {
+    position: relative;
+  }
+
+  .intro-image-frame {
+    position: relative;
+    aspect-ratio: 4/5;
+    border-radius: 60% 40% 55% 45% / 50% 45% 55% 50%;
+    overflow: hidden;
+    box-shadow: 0 20px 60px var(--shadow);
+  }
+
+  .artist-img-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--maroon) 0%, var(--brown) 40%, var(--gold) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .artist-avatar-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    border: 2px solid rgba(255,255,255,0.4);
+  }
+
+  .artist-img-placeholder .name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+  }
+
+  .artist-img-placeholder .role {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    font-style: italic;
+    margin-top: 0.25rem;
+    letter-spacing: 0.15em;
+  }
+
+  .intro-image-frame::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(74,15,23,0.3));
+  }
+
+  .intro-decoration {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 140px;
+    height: 140px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    opacity: 0.3;
+  }
+  .intro-decoration-2 {
+    position: absolute;
+    bottom: 20px;
+    left: -30px;
+    width: 90px;
+    height: 90px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    opacity: 0.4;
+  }
+
+  .intro-badge {
+    position: absolute;
+    bottom: 30px;
+    right: -10px;
+    background: var(--maroon);
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 25px var(--shadow);
+    border: 1px solid rgba(200,151,42,0.3);
+  }
+  .intro-badge .num {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.8rem;
+    color: var(--gold-light);
+    line-height: 1;
+  }
+  .intro-badge .label {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin-top: 0.25rem;
+  }
+
+  .intro-text { }
+
+  .intro-text .section-label { text-align: left; }
+  .intro-text .section-title { text-align: left; font-size: 2rem; }
+
+  .intro-text p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .stat-item {
+    text-align: center;
+    padding: 1.2rem;
+    background: var(--beige);
+    border-radius: 12px;
+    border: 1px solid rgba(200,151,42,0.2);
+  }
+
+  .stat-num {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.6rem;
+    color: var(--maroon);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.72rem;
+    color: var(--text-light);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.3rem;
+  }
+
+  /* ===========================
+     FEATURED CATEGORIES
+  =========================== */
+  .categories-section {
+    background: var(--maroon);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .categories-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='%23C8972A' stroke-width='0.4' fill='none' opacity='0.15'%3E%3Ccircle cx='50' cy='50' r='45'/%3E%3Ccircle cx='50' cy='50' r='30'/%3E%3Ccircle cx='50' cy='50' r='15'/%3E%3Cpath d='M50 5 L50 95 M5 50 L95 50'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 100px 100px;
+  }
+
+  .categories-section .section-title { color: var(--gold-pale); }
+  .categories-section .section-label { color: var(--gold-light); }
+  .categories-section .section-subtitle { color: rgba(245,223,160,0.7); }
+
+  .category-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .category-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(200,151,42,0.3);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .category-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255,255,255,0.1);
+    border-color: var(--gold);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  }
+
+  .category-card-img {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cat-bridal   { background: linear-gradient(135deg, #8B1A2A, #C8380A, #8B4513); }
+  .cat-groom    { background: linear-gradient(135deg, #1A2E3D, #2D5A4E, #4A3728); }
+  .cat-baby     { background: linear-gradient(135deg, #6B4C8B, #C8729A, #8B5E3C); }
+  .cat-engage   { background: linear-gradient(135deg, #8B4513, #C8972A, #6B1F2A); }
+
+  .category-card-img .cat-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.15;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='white' stroke-width='0.5' fill='none'%3E%3Ccircle cx='30' cy='30' r='25'/%3E%3Ccircle cx='30' cy='30' r='15'/%3E%3Ccircle cx='30' cy='30' r='5'/%3E%3Cpath d='M30 5 L30 55 M5 30 L55 30 M12 12 L48 48 M48 12 L12 48'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 60px;
+  }
+
+  .category-card-icon {
+    position: relative;
+    z-index: 1;
+    font-size: 3.5rem;
+  }
+
+  .category-card-body {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .category-card-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 0.9rem;
+    color: var(--gold-light);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+  }
+
+  .category-card-desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.95rem;
+    color: var(--brown-pale);
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  .category-card-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding: 0.4rem 1rem;
+    border: 1px solid rgba(200,151,42,0.4);
+    border-radius: 20px;
+    transition: all 0.3s;
+  }
+
+  .category-card:hover .category-card-link {
+    background: var(--gold);
+    color: var(--deep-maroon);
+    border-color: var(--gold);
+  }
+
+  /* ===========================
+     TESTIMONIALS
+  =========================== */
+  .testimonials-section {
+    background: var(--beige);
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .testimonial-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(200,151,42,0.15);
+    box-shadow: 0 4px 20px var(--shadow);
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+
+  .testimonial-card:hover { transform: translateY(-4px); }
+
+  .testimonial-card::before {
+    content: '"';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 6rem;
+    color: var(--gold-pale);
+    position: absolute;
+    top: -1rem;
+    left: 1.5rem;
+    line-height: 1;
+  }
+
+  .testimonial-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    line-height: 1.75;
+    color: var(--text-mid);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .author-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--maroon), var(--gold));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .author-info .name {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+  }
+
+  .author-info .occasion {
+    font-size: 0.78rem;
+    color: var(--text-light);
+    font-style: italic;
+  }
+
+  .stars {
+    color: var(--gold);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  /* ===========================
+     GALLERY PAGE
+  =========================== */
+  .gallery-page { padding-top: 70px; }
+
+  .gallery-header {
+    background: linear-gradient(135deg, var(--deep-maroon), var(--maroon));
+    padding: 5rem 2rem 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .gallery-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='%23C8972A' stroke-width='0.5' fill='none' opacity='0.2'%3E%3Ccircle cx='60' cy='60' r='55'/%3E%3Ccircle cx='60' cy='60' r='40'/%3E%3Ccircle cx='60' cy='60' r='25'/%3E%3Ccircle cx='60' cy='60' r='10'/%3E%3Cpath d='M60 5 L60 115 M5 60 L115 60 M22 22 L98 98 M98 22 L22 98'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 120px;
+  }
+
+  .gallery-header .section-title { color: var(--gold-pale); }
+  .gallery-header .section-label { color: var(--gold-light); }
+  .gallery-header p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--brown-pale);
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 1;
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.2rem;
+    padding: 4rem 2rem;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .gallery-item {
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 1;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 4px 15px var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 35px var(--shadow);
+    z-index: 2;
+  }
+
+  .gallery-item-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+
+  .gallery-item:hover .gallery-item-inner { transform: scale(1.05); }
+
+  .gallery-pattern {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gallery-pattern svg {
+    width: 85%;
+    height: 85%;
+    opacity: 0.7;
+  }
+
+  .gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(74,15,23,0.75));
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.2rem;
+  }
+
+  .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+  .gallery-overlay span {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--white);
+    font-size: 1rem;
+    font-style: italic;
+  }
+
+  /* Henna pattern colors */
+  .hp-1  { background: linear-gradient(135deg, #FAF0E0, #F5DFA0); }
+  .hp-2  { background: linear-gradient(135deg, #FDF5E8, #EDD5A0); }
+  .hp-3  { background: linear-gradient(135deg, #F8ECD8, #E8C890); }
+  .hp-4  { background: linear-gradient(135deg, #FCF0E4, #F0DCA8); }
+  .hp-5  { background: linear-gradient(135deg, #F5E8D0, #DFC080); }
+  .hp-6  { background: linear-gradient(135deg, #FBF2E2, #EDD8A0); }
+
+  /* ===========================
+     ABOUT PAGE
+  =========================== */
+  .about-page { padding-top: 70px; }
+
+  .about-hero {
+    background: linear-gradient(135deg, var(--deep-maroon) 0%, var(--brown) 100%);
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+
+  .about-hero .section-title { color: var(--gold-pale); }
+
+  .about-body {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .about-image-col { position: sticky; top: 90px; }
+
+  .about-image-frame {
+    aspect-ratio: 3/4;
+    border-radius: 50% 50% 45% 55% / 40% 60% 40% 60%;
+    overflow: hidden;
+    box-shadow: 0 25px 70px var(--shadow);
+    position: relative;
+  }
+
+  .about-image-frame::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 2px solid rgba(200,151,42,0.4);
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  .about-text-col h2 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.8rem;
+    color: var(--maroon);
+    margin-bottom: 1rem;
+  }
+
+  .about-text-col h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: var(--brown-light);
+    font-style: italic;
+    margin: 2rem 0 0.75rem;
+  }
+
+  .about-text-col p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    line-height: 1.85;
+    color: var(--text-mid);
+    margin-bottom: 1rem;
+  }
+
+  .about-highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .highlight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: var(--beige);
+    border-radius: 10px;
+    border-left: 3px solid var(--gold);
+  }
+
+  .highlight-icon { font-size: 1.5rem; flex-shrink: 0; }
+
+  .highlight-text .title {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--maroon);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .highlight-text .desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: var(--text-light);
+    font-style: italic;
+  }
+
+  /* ===========================
+     CONTACT PAGE
+  =========================== */
+  .contact-page { padding-top: 70px; }
+
+  .contact-header {
+    background: linear-gradient(135deg, var(--deep-maroon), var(--maroon));
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+
+  .contact-header .section-title { color: var(--gold-pale); }
+
+  .contact-body {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .contact-info h3 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.2rem;
+    color: var(--maroon);
+    margin-bottom: 2rem;
+  }
+
+  .contact-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.2rem;
+    background: var(--beige);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(200,151,42,0.15);
+    transition: border-color 0.3s;
+  }
+
+  .contact-detail:hover { border-color: var(--gold); }
+
+  .contact-detail-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--maroon);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    color: var(--white);
+  }
+
+  .contact-detail-text .label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 0.2rem;
+  }
+
+  .contact-detail-text .value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .social-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 2px solid;
+  }
+
+  .social-btn.instagram {
+    color: #c13584;
+    border-color: #c13584;
+  }
+  .social-btn.instagram:hover { background: #c13584; color: white; }
+
+  .social-btn.whatsapp {
+    color: #25D366;
+    border-color: #25D366;
+  }
+  .social-btn.whatsapp:hover { background: #25D366; color: white; }
+
+  /* Contact Form */
+  .contact-form-wrap {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 40px var(--shadow);
+    border: 1px solid rgba(200,151,42,0.15);
+  }
+
+  .contact-form-wrap h3 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.1rem;
+    color: var(--maroon);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-mid);
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 0.85rem 1.1rem;
+    border: 1.5px solid rgba(200,151,42,0.3);
+    border-radius: 10px;
+    background: var(--cream);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    color: var(--text-dark);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none;
+    -webkit-appearance: none;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(200,151,42,0.1);
+  }
+
+  .form-group textarea { resize: vertical; min-height: 130px; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 2rem;
+    color: var(--maroon);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+
+  .form-success .success-icon { font-size: 3rem; margin-bottom: 1rem; }
+
+  /* Map placeholder */
+  .map-placeholder {
+    margin-top: 2.5rem;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 2px solid rgba(200,151,42,0.2);
+    height: 220px;
+    background: linear-gradient(135deg, var(--beige), var(--brown-pale));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-mid);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    gap: 0.5rem;
+    position: relative;
+  }
+
+  .map-placeholder::before {
+    content: '📍';
+    font-size: 2.5rem;
+  }
+
+  /* ===========================
+     WHATSAPP FLOATING BTN
+  =========================== */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 999;
+    background: #25D366;
+    color: white;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+    text-decoration: none;
+    transition: all 0.3s;
+    animation: wa-pulse 3s infinite;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 30px rgba(37,211,102,0.7);
+  }
+
+  @keyframes wa-pulse {
+    0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.5); }
+    50% { box-shadow: 0 4px 35px rgba(37,211,102,0.8), 0 0 0 8px rgba(37,211,102,0.15); }
+  }
+
+  /* ===========================
+     FOOTER
+  =========================== */
+  footer {
+    background: var(--deep-maroon);
+    color: var(--brown-pale);
+    padding: 4rem 2rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='%23C8972A' stroke-width='0.3' fill='none' opacity='0.1'%3E%3Ccircle cx='40' cy='40' r='35'/%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3Ccircle cx='40' cy='40' r='8'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 80px;
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 3rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .footer-brand .logo-main {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.2rem;
+    color: var(--gold-light);
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .footer-brand .logo-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem;
+    color: var(--gold);
+    font-style: italic;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-brand p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(212,184,150,0.7);
+    font-style: italic;
+  }
+
+  .footer-col h4 {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(200,151,42,0.3);
+  }
+
+  .footer-col ul {
+    list-style: none;
+  }
+
+  .footer-col ul li {
+    margin-bottom: 0.6rem;
+  }
+
+  .footer-col ul li a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: rgba(212,184,150,0.75);
+    text-decoration: none;
+    font-style: italic;
+    transition: color 0.3s;
+  }
+
+  .footer-col ul li a:hover { color: var(--gold-light); }
+
+  .footer-col p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: rgba(212,184,150,0.75);
+    line-height: 1.6;
+    font-style: italic;
+  }
+
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 3rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(200,151,42,0.2);
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.9rem;
+    color: rgba(212,184,150,0.5);
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ===========================
+     SVG HENNA PATTERNS
+  =========================== */
+  .henna-svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+  }
+
+  /* ===========================
+     RESPONSIVE
+  =========================== */
+  @media (max-width: 1024px) {
+    .category-cards { grid-template-columns: repeat(2, 1fr); }
+    .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .intro-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .intro-image-wrap { max-width: 380px; margin: 0 auto; }
+    .about-body { grid-template-columns: 1fr; }
+    .about-image-col { position: static; max-width: 350px; margin: 0 auto; }
+    .contact-body { grid-template-columns: 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 768px) {
+    section { padding: 4rem 1.5rem; }
+
+    .nav-menu {
+      position: fixed;
+      top: 70px; left: 0; right: 0;
+      background: var(--white);
+      flex-direction: column;
+      align-items: stretch;
+      padding: 1rem 0;
+      box-shadow: 0 10px 30px var(--shadow);
+      border-top: 1px solid rgba(200,151,42,0.2);
+      transform: translateY(-150%);
+      transition: transform 0.4s ease;
+      z-index: 999;
+      gap: 0;
+    }
+    .nav-menu.open { transform: translateY(0); }
+    .nav-menu a { padding: 0.75rem 1.5rem; font-size: 0.85rem; }
+    .nav-toggle { display: flex; }
+
+    .dropdown-menu {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      box-shadow: none;
+      border: none;
+      border-top: 1px solid rgba(200,151,42,0.15);
+      background: var(--beige);
+      padding: 0.5rem 0;
+      display: none;
+    }
+    .nav-menu li.open .dropdown-menu { display: block; }
+    .dropdown-menu a { padding: 0.55rem 2rem; }
+
+    .hero-title { font-size: 2rem; }
+    .hero-buttons { flex-direction: column; align-items: center; }
+
+    .stats-row { grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+
+    .category-cards { grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+
+    .about-highlights { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); padding: 2rem 1.5rem; }
+  }
+
+  @media (max-width: 480px) {
+    .category-cards { grid-template-columns: 1fr; }
+    .nav-logo-main { font-size: 0.9rem; }
+    .category-card-img { height: 180px; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    .hero-title { font-size: 1.7rem; }
+  }
+
+  /* ===========================
+     ANIMATIONS & TRANSITIONS
+  =========================== */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease forwards;
+  }
+  .fade-in-1 { animation-delay: 0.1s; }
+  .fade-in-2 { animation-delay: 0.25s; }
+  .fade-in-3 { animation-delay: 0.4s; }
+  .fade-in-4 { animation-delay: 0.55s; }
+
+  .section-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .section-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ===========================
+     MEHNDI CATEGORY PAGE
+  =========================== */
+  .category-page-header {
+    padding: 5rem 2rem 4rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--deep-maroon), var(--maroon));
+    position: relative;
+    overflow: hidden;
+  }
+  .category-page-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='%23C8972A' stroke-width='0.5' fill='none' opacity='0.15'%3E%3Ccircle cx='60' cy='60' r='55'/%3E%3Ccircle cx='60' cy='60' r='40'/%3E%3Ccircle cx='60' cy='60' r='25'/%3E%3Ccircle cx='60' cy='60' r='10'/%3E%3Cpath d='M60 5 L60 115 M5 60 L115 60 M22 22 L98 98 M98 22 L22 98'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 120px;
+  }
+  .category-page-header .section-title { color: var(--gold-pale); }
+  .category-page-header .section-label { color: var(--gold-light); }
+  .category-page-header p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--brown-pale);
+    font-size: 1.15rem;
+    position: relative;
+    z-index: 1;
+    max-width: 580px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    cursor: pointer;
+    background: none;
+    border: none;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 2rem;
+    transition: color 0.3s;
+  }
+  .back-btn:hover { color: var(--gold-pale); }
+
+  /* ===========================
+     CTA BANNER
+  =========================== */
+  .cta-section {
+    background: linear-gradient(135deg, var(--gold), var(--brown));
+    padding: 5rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='white' stroke-width='0.5' fill='none' opacity='0.15'%3E%3Ccircle cx='40' cy='40' r='35'/%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3Ccircle cx='40' cy='40' r='8'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 80px;
+  }
+
+  .cta-section h2 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    color: var(--deep-maroon);
+    margin-bottom: 0.75rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-section p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: var(--deep-maroon);
+    opacity: 0.8;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-section .btn-primary {
+    background: var(--deep-maroon);
+    color: var(--gold-light);
+    border-color: var(--deep-maroon);
+    position: relative;
+    z-index: 1;
+  }
+  .cta-section .btn-primary:hover { background: var(--maroon); }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a class="nav-logo" onclick="showPage('home')" style="cursor:pointer">
+      <span class="nav-logo-main">Henna the Bloom</span>
+      <span class="nav-logo-sub">✦ Anjali Soni · Jaora, MP ✦</span>
+    </a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a onclick="showPage('home')" href="javascript:void(0)">Home</a></li>
+      <li><a onclick="showPage('about')" href="javascript:void(0)">About</a></li>
+      <li>
+        <a href="javascript:void(0)" onclick="toggleDropdown(this)">
+          Mehndi Categories <span class="dropdown-arrow">▾</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a onclick="showGallery('bridal')" href="javascript:void(0)">🌸 Bridal Mehndi</a></li>
+          <li><a onclick="showGallery('groom')" href="javascript:void(0)">🎩 Groom Mehndi</a></li>
+          <li><a onclick="showGallery('baby')" href="javascript:void(0)">🍼 Baby Shower Mehndi</a></li>
+          <li><a onclick="showGallery('engagement')" href="javascript:void(0)">💍 Engagement Mehndi</a></li>
+        </ul>
+      </li>
+      <li><a onclick="showPage('contact')" href="javascript:void(0)">Contact</a></li>
+      <li><a onclick="showPage('contact')" href="javascript:void(0)" class="nav-cta">Book Now</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleNav()" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ========================
+     HOME PAGE
+======================== -->
+<div id="page-home" class="page active">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-mandala"></div>
+    <div class="hero-content">
+      <p class="hero-tagline">✦ Traditional · Elegant · Timeless ✦</p>
+      <h1 class="hero-title">
+        Henna the Bloom
+        <span>By Anjali Soni</span>
+      </h1>
+      <div class="hero-ornament">❧ ✦ ❧</div>
+      <p class="hero-subtitle">Where every stroke tells a story of love, tradition, and artistry. Professional Mehndi artist in Jaora, Madhya Pradesh.</p>
+      <div class="hero-buttons">
+        <a onclick="showPage('contact')" href="javascript:void(0)" class="btn btn-primary">✦ Book Now</a>
+        <a onclick="showPage('about')" href="javascript:void(0)" class="btn btn-secondary">Meet the Artist</a>
+        <a onclick="showPage('contact')" href="javascript:void(0)" class="btn btn-secondary">View Designs</a>
+      </div>
+    </div>
+    <div class="scroll-hint">Scroll</div>
+  </section>
+
+  <!-- INTRO / ARTIST FEATURE -->
+  <section class="intro-section">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-image-wrap section-reveal">
+          <div class="intro-image-frame">
+            <div class="artist-img-placeholder">
+              <div class="artist-avatar-icon">🌸</div>
+              <span class="name">Anjali Soni</span>
+              <span class="role">Mehndi Artist</span>
+            </div>
+          </div>
+          <div class="intro-decoration"></div>
+          <div class="intro-decoration-2"></div>
+          <div class="intro-badge">
+            <div class="num">5+</div>
+            <div class="label">Years of Artistry</div>
+          </div>
+        </div>
+        <div class="intro-text">
+          <div class="section-label">✦ Meet the Artist</div>
+          <h2 class="section-title" style="text-align:left; font-size:1.9rem;">Anjali Soni</h2>
+          <div class="section-ornament" style="justify-content:flex-start; margin-bottom:1.5rem;">
+            <span>✦</span>
+            <div style="flex:0 0 80px; height:1px; background:linear-gradient(90deg, var(--gold), transparent);"></div>
+          </div>
+          <p>With over <strong>5 years of dedicated practice</strong>, Anjali Soni has transformed mehndi from a craft into a deeply personal form of expression. Based in Jaora, Madhya Pradesh, she brings the ancient art of henna to life with extraordinary detail and care.</p>
+          <p>Her designs weave together <em>classical Indian motifs</em> — peacocks, lotus blooms, paisleys, and fine geometric patterns — with a modern elegance that suits every celebration. From intimate family gatherings to grand bridal ceremonies, Anjali's work adorns the hands and hearts of those who trust her art.</p>
+
+          <div class="stats-row section-reveal">
+            <div class="stat-item">
+              <div class="stat-num">5+</div>
+              <div class="stat-label">Years Exp.</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">100+</div>
+              <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">4</div>
+              <div class="stat-label">Specialties</div>
+            </div>
+          </div>
+
+          <p>Beyond her artistry, Anjali is deeply committed to <strong>nurturing the next generation of henna artists</strong>. She offers coaching to new talent, sharing techniques and traditions with aspiring artists who carry this beautiful craft forward.</p>
+
+          <div class="hero-buttons" style="justify-content:flex-start; margin-top:2rem;">
+            <a onclick="showPage('about')" href="javascript:void(0)" class="btn btn-maroon">Read Her Story</a>
+            <a onclick="showPage('contact')" href="javascript:void(0)" class="btn btn-outline-gold">Book a Session</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEHNDI CATEGORIES -->
+  <section class="categories-section">
+    <div class="container">
+      <div class="section-label" style="color:var(--gold-light);">✦ Our Specializations</div>
+      <h2 class="section-title" style="color:var(--gold-pale); margin-bottom:0.5rem;">Mehndi Categories</h2>
+      <div class="section-ornament" style="margin-bottom:1rem;"><span>✦</span></div>
+      <p class="section-subtitle" style="color:rgba(245,223,160,0.7);">From bridal grandeur to delicate celebrations, every occasion deserves its own unique mehndi story</p>
+
+      <div class="category-cards section-reveal">
+        <div class="category-card" onclick="showGallery('bridal')">
+          <div class="category-card-img cat-bridal">
+            <div class="cat-pattern"></div>
+            <div class="category-card-icon">🌸</div>
+          </div>
+          <div class="category-card-body">
+            <h3 class="category-card-title">Bridal Mehndi</h3>
+            <p class="category-card-desc">Elaborate, intricate designs crafted for the most sacred of days. Your wedding deserves perfection.</p>
+            <span class="category-card-link">Explore Designs</span>
+          </div>
+        </div>
+
+        <div class="category-card" onclick="showGallery('groom')">
+          <div class="category-card-img cat-groom">
+            <div class="cat-pattern"></div>
+            <div class="category-card-icon">🎩</div>
+          </div>
+          <div class="category-card-body">
+            <h3 class="category-card-title">Groom Mehndi</h3>
+            <p class="category-card-desc">Bold yet refined patterns for the groom — a celebration of tradition and masculinity.</p>
+            <span class="category-card-link">Explore Designs</span>
+          </div>
+        </div>
+
+        <div class="category-card" onclick="showGallery('baby')">
+          <div class="category-card-img cat-baby">
+            <div class="cat-pattern"></div>
+            <div class="category-card-icon">🍼</div>
+          </div>
+          <div class="category-card-body">
+            <h3 class="category-card-title">Baby Shower Mehndi</h3>
+            <p class="category-card-desc">Soft, joyful designs celebrating new beginnings and the miracle of new life.</p>
+            <span class="category-card-link">Explore Designs</span>
+          </div>
+        </div>
+
+        <div class="category-card" onclick="showGallery('engagement')">
+          <div class="category-card-img cat-engage">
+            <div class="cat-pattern"></div>
+            <div class="category-card-icon">💍</div>
+          </div>
+          <div class="category-card-body">
+            <h3 class="category-card-title">Engagement Mehndi</h3>
+            <p class="category-card-desc">Elegant patterns to mark the promise of forever — love beautifully expressed.</p>
+            <span class="category-card-link">Explore Designs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-label">✦ What Clients Say</div>
+      <h2 class="section-title">Words of Love</h2>
+      <div class="section-ornament"><span>✦</span></div>
+      <p class="section-subtitle">Every design leaves an impression — here's what our cherished clients share</p>
+
+      <div class="testimonials-grid section-reveal">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">Anjali's bridal mehndi was absolutely breathtaking. Every detail was so precise and the designs lasted for weeks. All my guests were asking about who did it!</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">P</div>
+            <div class="author-info">
+              <div class="name">Priya Sharma</div>
+              <div class="occasion">Bride, December 2024</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">I got engagement mehndi done and Anjali ji exceeded all expectations. The motifs were so intricate and she finished within the time we discussed. Highly recommend!</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">R</div>
+            <div class="author-info">
+              <div class="name">Ritu Malviya</div>
+              <div class="occasion">Engagement Ceremony, 2024</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">A true artist! I took her baby shower mehndi and the design was so beautiful and meaningful. She included little baby footprints — it made me cry happy tears.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">S</div>
+            <div class="author-info">
+              <div class="name">Sunita Patel</div>
+              <div class="occasion">Baby Shower, 2024</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Ready to Bloom?</h2>
+    <p>Let Anjali transform your special occasion with the timeless art of mehndi</p>
+    <div class="hero-buttons" style="justify-content:center;">
+      <a onclick="showPage('contact')" href="javascript:void(0)" class="btn btn-primary">✦ Book Your Appointment</a>
+      <a href="https://wa.me/919999999999" target="_blank" class="btn btn-secondary" style="color:var(--deep-maroon); border-color:var(--deep-maroon);">💬 WhatsApp Us</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-main">Henna the Bloom</span>
+        <span class="logo-sub">By Anjali Soni</span>
+        <p>Crafting stories through the ancient art of mehndi, one intricate design at a time. Based in Jaora, Madhya Pradesh — serving love, tradition, and beauty.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a onclick="showPage('home')" href="javascript:void(0)">Home</a></li>
+          <li><a onclick="showPage('about')" href="javascript:void(0)">About Anjali</a></li>
+          <li><a onclick="showGallery('bridal')" href="javascript:void(0)">Bridal Mehndi</a></li>
+          <li><a onclick="showGallery('groom')" href="javascript:void(0)">Groom Mehndi</a></li>
+          <li><a onclick="showPage('contact')" href="javascript:void(0)">Book Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a onclick="showGallery('bridal')" href="javascript:void(0)">Bridal Mehndi</a></li>
+          <li><a onclick="showGallery('groom')" href="javascript:void(0)">Groom Mehndi</a></li>
+          <li><a onclick="showGallery('baby')" href="javascript:void(0)">Baby Shower</a></li>
+          <li><a onclick="showGallery('engagement')" href="javascript:void(0)">Engagement</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>📍 Jaora, Madhya Pradesh, India</p><br>
+        <p>📞 +91 99999 99999</p><br>
+        <p>✉ hennabloom@email.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="leaf-divider">✦ ❧ ✦ ❧ ✦</div>
+      © 2025 Henna the Bloom · Anjali Soni · Jaora, MP · All Rights Reserved
+    </div>
+  </footer>
+
+</div>
+
+<!-- ========================
+     ABOUT PAGE
+======================== -->
+<div id="page-about" class="page">
+
+  <div class="about-page">
+    <div class="about-hero" style="padding-top: 5rem;">
+      <div class="section-label" style="color:var(--gold-light);">✦ Our Story</div>
+      <h2 class="section-title" style="color:var(--gold-pale);">About Anjali Soni</h2>
+      <div class="section-ornament"><span style="color:var(--gold-light);">✦</span></div>
+      <p style="font-family:'Cormorant Garamond',serif; color:var(--brown-pale); font-style:italic; font-size:1.15rem; max-width:550px; margin:0 auto; position:relative; z-index:1; line-height:1.7;">A passion for henna, a love for celebration, and a commitment to artistry that spans over half a decade</p>
+    </div>
+
+    <div class="about-body">
+      <div class="about-image-col">
+        <div class="about-image-frame">
+          <div class="artist-img-placeholder" style="border-radius:inherit;">
+            <div class="artist-avatar-icon" style="width:100px; height:100px; font-size:3rem;">🌸</div>
+            <span class="name" style="font-size:1.7rem;">Anjali Soni</span>
+            <span class="role">Professional Henna Artist</span>
+            <span class="role" style="margin-top:0.25rem; font-size:0.8rem;">Jaora, Madhya Pradesh</span>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem; background:var(--beige); border-radius:16px; padding:1.5rem; border:1px solid rgba(200,151,42,0.2);">
+          <div class="section-label" style="text-align:left; margin-bottom:1rem;">✦ At a Glance</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+            <div class="stat-item"><div class="stat-num">5+</div><div class="stat-label">Years Exp.</div></div>
+            <div class="stat-item"><div class="stat-num">100+</div><div class="stat-label">Clients</div></div>
+            <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">Categories</div></div>
+            <div class="stat-item"><div class="stat-num">∞</div><div class="stat-label">Passion</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-text-col">
+        <div class="section-label">✦ Her Journey</div>
+        <h2>The Art of Anjali</h2>
+        <div class="section-ornament" style="justify-content:flex-start; margin-bottom:1.5rem;"><span>✦</span><div style="flex:0 0 80px; height:1px; background:linear-gradient(90deg, var(--gold), transparent);"></div></div>
+
+        <p>Anjali Soni's love for mehndi began not in a classroom but in the warmth of her family's celebrations. As a young girl in Jaora, she watched in awe as patterns bloomed across her mother's and grandmother's hands before every puja and wedding. That childhood wonder never left her — it deepened into a lifelong calling.</p>
+
+        <h3>From Tradition to Mastery</h3>
+        <p>Over the past <strong>5+ years</strong>, Anjali has refined her craft through relentless practice, learning from the finest traditional motifs of Rajasthan and Madhya Pradesh while incorporating contemporary aesthetics that speak to modern sensibilities. Her signature style blends <em>fine-line florals, dense mandala patterns, and graceful peacocks</em> with storytelling elements that make each design unique to its wearer.</p>
+
+        <p>She uses only the finest quality henna — natural, fresh, and prepared with care — ensuring deep, rich color that lasts and skin that feels nurtured rather than irritated.</p>
+
+        <h3>Serving the Community</h3>
+        <p>Having served <strong>100+ satisfied clients</strong> across Jaora and the surrounding regions of Madhya Pradesh, Anjali has become a trusted name for families planning their most precious occasions. Brides seek her months in advance; mothers request her for their daughters' engagements; friends bring her along to baby showers as a cherished gift.</p>
+
+        <div class="about-highlights">
+          <div class="highlight-item">
+            <div class="highlight-icon">🌸</div>
+            <div class="highlight-text">
+              <div class="title">Bridal Specialist</div>
+              <div class="desc">Full bridal sets with intricate, lasting designs</div>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">⭐</div>
+            <div class="highlight-text">
+              <div class="title">100+ Happy Clients</div>
+              <div class="desc">A reputation built on trust and beauty</div>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">🎨</div>
+            <div class="highlight-text">
+              <div class="title">5+ Years Expertise</div>
+              <div class="desc">Mastery of traditional and contemporary styles</div>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">🏫</div>
+            <div class="highlight-text">
+              <div class="title">Mentoring Artists</div>
+              <div class="desc">Coaching aspiring mehndi artists</div>
+            </div>
+          </div>
+        </div>
+
+        <h3>Nurturing New Talent</h3>
+        <p>Anjali believes deeply that the art of henna belongs to everyone. Beyond client work, she dedicates time to <strong>coaching and mentoring new artists</strong> — young women and aspiring mehndi practitioners who come to her to learn. She teaches not just technique but also the philosophy behind the art: patience, intention, and the sacred role of mehndi in Indian culture.</p>
+
+        <p>Her workshops have helped dozens of local artists begin their own journeys, and she takes quiet pride in seeing her students flourish at their own celebrations and events.</p>
+
+        <div class="hero-buttons" style="justify-content:flex-start; margin-top:2.5rem;">
+          <a onclick="showPage('contact')" href="javascript:void(0)" class="btn btn-maroon">✦ Book Anjali</a>
+          <a onclick="showGallery('bridal')" href="javascript:void(0)" class="btn btn-outline-gold">View Designs</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-main">Henna the Bloom</span>
+          <span class="logo-sub">By Anjali Soni</span>
+          <p>Crafting stories through the ancient art of mehndi, one intricate design at a time.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a onclick="showPage('home')" href="javascript:void(0)">Home</a></li>
+            <li><a onclick="showPage('about')" href="javascript:void(0)">About</a></li>
+            <li><a onclick="showPage('contact')" href="javascript:void(0)">Book Now</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul>
+            <li><a onclick="showGallery('bridal')" href="javascript:void(0)">Bridal Mehndi</a></li>
+            <li><a onclick="showGallery('groom')" href="javascript:void(0)">Groom Mehndi</a></li>
+            <li><a onclick="showGallery('baby')" href="javascript:void(0)">Baby Shower</a></li>
+            <li><a onclick="showGallery('engagement')" href="javascript:void(0)">Engagement</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>📍 Jaora, MP, India</p><br>
+          <p>📞 +91 99999 99999</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="leaf-divider">✦ ❧ ✦ ❧ ✦</div>
+        © 2025 Henna the Bloom · Anjali Soni · Jaora, MP
+      </div>
+    </footer>
+  </div>
+</div>
+
+<!-- ========================
+     GALLERY / CATEGORY PAGE
+======================== -->
+<div id="page-gallery" class="page">
+  <div class="gallery-page" id="galleryContent">
+    <!-- Dynamically filled -->
+  </div>
+</div>
+
+<!-- ========================
+     CONTACT PAGE
+======================== -->
+<div id="page-contact" class="page">
+
+  <div class="contact-page">
+    <div class="contact-header">
+      <div class="section-label" style="color:var(--gold-light); position:relative; z-index:1;">✦ Get in Touch</div>
+      <h2 class="section-title" style="position:relative; z-index:1;">Book a Session</h2>
+      <div class="section-ornament" style="position:relative; z-index:1;"><span style="color:var(--gold-light);">✦</span></div>
+      <p style="font-family:'Cormorant Garamond',serif; color:var(--brown-pale); font-style:italic; font-size:1.1rem; max-width:500px; margin:0 auto; position:relative; z-index:1;">We'd love to be part of your celebration. Reach out to discuss your design vision and schedule your appointment.</p>
+    </div>
+
+    <div class="contact-body">
+      <div class="contact-info">
+        <h3>Reach Anjali</h3>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📍</div>
+          <div class="contact-detail-text">
+            <div class="label">Location</div>
+            <div class="value">Jaora, Madhya Pradesh, India</div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📞</div>
+          <div class="contact-detail-text">
+            <div class="label">Phone / WhatsApp</div>
+            <div class="value">+91 99999 99999</div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">✉</div>
+          <div class="contact-detail-text">
+            <div class="label">Email</div>
+            <div class="value">hennabloom@email.com</div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">🕐</div>
+          <div class="contact-detail-text">
+            <div class="label">Availability</div>
+            <div class="value">Mon – Sun: 9 AM – 8 PM</div>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="https://instagram.com" target="_blank" class="social-btn instagram">
+            📸 Instagram
+          </a>
+          <a href="https://wa.me/919999999999" target="_blank" class="social-btn whatsapp">
+            💬 WhatsApp
+          </a>
+        </div>
+
+        <div class="map-placeholder">
+          <span style="font-size:1.1rem; font-weight:bold; color:var(--maroon);">Jaora, Madhya Pradesh</span>
+          <span style="font-size:0.9rem; color:var(--text-light);">Ratlam District, MP 457226</span>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <h3>✦ Send a Message</h3>
+        <div id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name *</label>
+              <input type="text" id="fname" placeholder="e.g. Priya Sharma">
+            </div>
+            <div class="form-group">
+              <label>Phone Number *</label>
+              <input type="tel" id="fphone" placeholder="+91 98765 43210">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" id="femail" placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label>Occasion / Category</label>
+            <select id="foccasion">
+              <option value="">— Select Occasion —</option>
+              <option>Bridal Mehndi</option>
+              <option>Groom Mehndi</option>
+              <option>Engagement Mehndi</option>
+              <option>Baby Shower Mehndi</option>
+              <option>Other Celebration</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Your Message</label>
+            <textarea id="fmsg" placeholder="Tell Anjali about your occasion, preferred date, design inspirations…"></textarea>
+          </div>
+          <button onclick="submitForm()" class="btn btn-maroon" style="width:100%; font-size:0.85rem; padding:1rem;">✦ Send Message</button>
+        </div>
+        <div class="form-success" id="formSuccess">
+          <div class="success-icon">🌸</div>
+          <p>Thank you for reaching out!</p>
+          <p style="font-size:1rem; color:var(--text-light); margin-top:0.5rem;">Anjali will get back to you within 24 hours. We look forward to being part of your beautiful celebration.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-main">Henna the Bloom</span>
+          <span class="logo-sub">By Anjali Soni</span>
+          <p>The beauty of henna, the warmth of tradition. Jaora, MP.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a onclick="showPage('home')" href="javascript:void(0)">Home</a></li>
+            <li><a onclick="showPage('about')" href="javascript:void(0)">About</a></li>
+            <li><a onclick="showPage('contact')" href="javascript:void(0)">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul>
+            <li><a onclick="showGallery('bridal')" href="javascript:void(0)">Bridal Mehndi</a></li>
+            <li><a onclick="showGallery('groom')" href="javascript:void(0)">Groom Mehndi</a></li>
+            <li><a onclick="showGallery('baby')" href="javascript:void(0)">Baby Shower</a></li>
+            <li><a onclick="showGallery('engagement')" href="javascript:void(0)">Engagement</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>📍 Jaora, MP, India</p><br>
+          <p>📞 +91 99999 99999</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="leaf-divider">✦ ❧ ✦ ❧ ✦</div>
+        © 2025 Henna the Bloom · Anjali Soni · Jaora, MP
+      </div>
+    </footer>
+  </div>
+</div>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919999999999" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">💬</a>
+
+<script>
+  // =====================
+  // PAGE ROUTING
+  // =====================
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page-' + id).classList.add('active');
+    window.scrollTo({top: 0, behavior: 'smooth'});
+    closeNav();
+    initReveal();
+  }
+
+  function showGallery(type) {
+    const config = {
+      bridal: {
+        icon: '🌸',
+        label: 'Bridal Mehndi',
+        desc: 'The most elaborate and meaningful designs for the most sacred day of your life. Anjali\'s bridal mehndi is a breathtaking tapestry of florals, paisleys, peacocks, and fine geometric lattices — applied with devotion and finished with care.',
+        color: 'linear-gradient(135deg, #8B1A2A, #C8380A, #4A0F17)',
+        patterns: [
+          { name: 'Full Hand Bridal', desc: 'Traditional full-hand design with florals and paisleys' },
+          { name: 'Rajasthani Bridal', desc: 'Dense, classic Rajasthani motifs with fine line work' },
+          { name: 'Arabic Bridal', desc: 'Bold floral vines on the back of hand' },
+          { name: 'Dulhan Special', desc: 'Intricate net pattern with groom-bride motif' },
+          { name: 'Lotus Mandala', desc: 'Central lotus mandala with flowing vines' },
+          { name: 'Mehndi Full Sleeve', desc: 'Full arm sleeve with dense traditional design' },
+          { name: 'Mughal Bridal', desc: 'Architectural arches and fine line Mughal style' },
+          { name: 'Peacock Motif', desc: 'Peacock centerpiece with feather detailing' },
+          { name: 'Paisley Dance', desc: 'Cascading paisleys on palm and fingers' },
+        ]
+      },
+      groom: {
+        icon: '🎩',
+        label: 'Groom Mehndi',
+        desc: 'Masculine, refined, and culturally rich. Groom mehndi by Anjali honours tradition with bold geometric patterns, royal motifs, and subtle detailing that complement the groom\'s attire on his wedding day.',
+        color: 'linear-gradient(135deg, #1A2E3D, #2D5A4E, #1A3030)',
+        patterns: [
+          { name: 'Classic Groom Hand', desc: 'Traditional bold design for groom\'s palm' },
+          { name: 'Dulha Motif', desc: 'Groom on horseback — classic wedding design' },
+          { name: 'Geometric Bold', desc: 'Strong geometric bands and diamond patterns' },
+          { name: 'Wrist Band Design', desc: 'Elegant band design around wrist and thumb' },
+          { name: 'Royal Insignia', desc: 'Regal symbols and crests in bold lines' },
+          { name: 'Minimal Groom', desc: 'Simple yet elegant fine-line design' },
+        ]
+      },
+      baby: {
+        icon: '🍼',
+        label: 'Baby Shower Mehndi',
+        desc: 'Celebrate the miracle of new life with soft, joyful mehndi patterns. Anjali creates designs filled with nurturing symbols — cradles, baby elephants, lotus buds, and sweet florals — that honour this sacred transition into motherhood.',
+        color: 'linear-gradient(135deg, #6B4C8B, #C8729A, #5E3A5E)',
+        patterns: [
+          { name: 'Mother & Baby', desc: 'Beautiful mother-child motif with florals' },
+          { name: 'Baby Footprints', desc: 'Delicate tiny footprints surrounded by blossoms' },
+          { name: 'Cradle Design', desc: 'Baby cradle with garland motif' },
+          { name: 'Lotus & Life', desc: 'Lotus blossom symbolising new life' },
+          { name: 'Sweet Florals', desc: 'Light floral patterns for the celebration' },
+          { name: 'Baby Elephant', desc: 'Cute elephant motif for the new arrival' },
+        ]
+      },
+      engagement: {
+        icon: '💍',
+        label: 'Engagement Mehndi',
+        desc: 'Mark the beginning of forever with elegant engagement mehndi. Anjali\'s designs capture the excitement and romance of this milestone — rings, interlocked hearts, flowers in bloom, and patterns as joyful as the occasion itself.',
+        color: 'linear-gradient(135deg, #6B4513, #C8972A, #4A2F1A)',
+        patterns: [
+          { name: 'Ring & Roses', desc: 'Engagement ring motif with rose garlands' },
+          { name: 'Couple Initials', desc: 'Intertwined initials in classic mehndi style' },
+          { name: 'Love Blooms', desc: 'Romantic floral pattern for the engaged couple' },
+          { name: 'Golden Vines', desc: 'Flowing vine design with diamond fill' },
+          { name: 'Paisley Promise', desc: 'Paisley-heavy design for the occasion' },
+          { name: 'Fine Line Glam', desc: 'Ultra-fine contemporary engagement design' },
+          { name: 'Floral Cuff', desc: 'Floral cuff design on wrist and back of hand' },
+        ]
+      }
+    };
+
+    const data = config[type];
+    const galPage = document.getElementById('galleryContent');
+
+    galPage.innerHTML = `
+      <div class="category-page-header" style="padding-top:5rem;">
+        <button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+        <div class="section-label" style="color:var(--gold-light); position:relative; z-index:1;">✦ Mehndi Gallery</div>
+        <h2 class="section-title">${data.icon} ${data.label}</h2>
+        <div class="section-ornament" style="position:relative; z-index:1;"><span style="color:var(--gold-light);">✦</span></div>
+        <p>${data.desc}</p>
+      </div>
+      <div class="gallery-grid">
+        ${data.patterns.map((p, i) => `
+          <div class="gallery-item section-reveal">
+            <div class="gallery-item-inner">
+              <div class="gallery-pattern" style="background:${data.color};">
+                ${generateHennaPatternSVG(i, type)}
+              </div>
+              <div class="gallery-overlay">
+                <span>${p.name}</span>
+                <span style="font-size:0.82rem; opacity:0.8;">${p.desc}</span>
+              </div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+      <div style="text-align:center; padding:2rem 2rem 4rem;">
+        <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.15rem; color:var(--text-light); margin-bottom:1.5rem;">Love what you see? Book Anjali for your upcoming celebration.</p>
+        <button onclick="showPage('contact')" class="btn btn-maroon">✦ Book Your Session</button>
+      </div>
+      <footer>
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <span class="logo-main">Henna the Bloom</span>
+            <span class="logo-sub">By Anjali Soni</span>
+            <p>The beauty of henna, the warmth of tradition. Jaora, MP.</p>
+          </div>
+          <div class="footer-col"><h4>Navigate</h4><ul>
+            <li><a onclick="showPage('home')" href="javascript:void(0)">Home</a></li>
+            <li><a onclick="showPage('about')" href="javascript:void(0)">About</a></li>
+            <li><a onclick="showPage('contact')" href="javascript:void(0)">Contact</a></li>
+          </ul></div>
+          <div class="footer-col"><h4>Categories</h4><ul>
+            <li><a onclick="showGallery('bridal')" href="javascript:void(0)">Bridal Mehndi</a></li>
+            <li><a onclick="showGallery('groom')" href="javascript:void(0)">Groom Mehndi</a></li>
+            <li><a onclick="showGallery('baby')" href="javascript:void(0)">Baby Shower</a></li>
+            <li><a onclick="showGallery('engagement')" href="javascript:void(0)">Engagement</a></li>
+          </ul></div>
+          <div class="footer-col"><h4>Contact</h4><p>📍 Jaora, MP, India</p><br><p>📞 +91 99999 99999</p></div>
+        </div>
+        <div class="footer-bottom"><div class="leaf-divider">✦ ❧ ✦ ❧ ✦</div>© 2025 Henna the Bloom · Anjali Soni</div>
+      </footer>
+    `;
+
+    showPage('gallery');
+  }
+
+  // Generate varied SVG henna patterns
+  function generateHennaPatternSVG(idx, type) {
+    const patterns = [
+      // Mandala
+      `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><g stroke="rgba(245,223,160,0.85)" stroke-width="1" fill="none"><circle cx="100" cy="100" r="90"/><circle cx="100" cy="100" r="70"/><circle cx="100" cy="100" r="50"/><circle cx="100" cy="100" r="30"/><circle cx="100" cy="100" r="10"/><path d="M100 10 L100 190 M10 100 L190 100 M37 37 L163 163 M163 37 L37 163"/><path d="M100 10 L108 30 L100 22 L92 30 Z M100 190 L108 170 L100 178 L92 170 Z M10 100 L30 108 L22 100 L30 92 Z M190 100 L170 108 L178 100 L170 92 Z"/><circle cx="100" cy="10" r="5" fill="rgba(245,223,160,0.5)"/><circle cx="100" cy="190" r="5" fill="rgba(245,223,160,0.5)"/><circle cx="10" cy="100" r="5" fill="rgba(245,223,160,0.5)"/><circle cx="190" cy="100" r="5" fill="rgba(245,223,160,0.5)"/></g></svg>`,
+      // Paisley
+      `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><g stroke="rgba(245,223,160,0.85)" stroke-width="1.2" fill="none"><ellipse cx="100" cy="110" rx="35" ry="55"/><path d="M100 55 Q130 40 140 70 Q150 95 120 110 Q100 120 80 105 Q55 85 75 60 Q85 45 100 55"/><circle cx="100" cy="90" r="12"/><circle cx="100" cy="90" r="6"/><path d="M60 100 Q50 80 60 65 M140 100 Q150 80 140 65"/><circle cx="75" cy="75" r="4"/><circle cx="125" cy="75" r="4"/><path d="M85 130 Q100 145 115 130 M80 140 Q100 160 120 140"/></g></svg>`,
+      // Lotus
+      `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><g stroke="rgba(245,223,160,0.85)" stroke-width="1.2" fill="none"><ellipse cx="100" cy="100" rx="20" ry="30"/><path d="M100 70 Q80 55 75 75 Q70 95 100 100"/><path d="M100 70 Q120 55 125 75 Q130 95 100 100"/><path d="M100 75 Q65 50 60 80 Q55 105 100 105"/><path d="M100 75 Q135 50 140 80 Q145 105 100 105"/><path d="M100 80 Q50 45 45 85 Q40 115 100 110"/><path d="M100 80 Q150 45 155 85 Q160 115 100 110"/><line x1="100" y1="130" x2="100" y2="165"/><path d="M100 165 Q80 155 75 165 Q85 175 100 165"/><path d="M100 165 Q120 155 125 165 Q115 175 100 165"/></g></svg>`,
+      // Peacock
+      `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><g stroke="rgba(245,223,160,0.85)" stroke-width="1.2" fill="none"><circle cx="100" cy="80" r="18"/><circle cx="100" cy="80" r="8"/><circle cx="100" cy="80" r="3" fill="rgba(245,223,160,0.5)"/><path d="M100 98 L100 160"/><path d="M100 110 Q130 95 145 110 Q130 125 100 120"/><path d="M100 110 Q70 95 55 110 Q70 125 100 120"/><path d="M100 125 Q140 100 160 120 Q140 140 100 135"/><path d="M100 125 Q60 100 40 120 Q60 140 100 135"/><path d="M100 140 Q145 108 168 132 Q145 155 100 148"/><path d="M100 140 Q55 108 32 132 Q55 155 100 148"/><circle cx="145" cy="110" r="5"/><circle cx="55" cy="110" r="5"/><circle cx="160" cy="120" r="5"/><circle cx="40" cy="120" r="5"/><circle cx="168" cy="132" r="5"/><circle cx="32" cy="132" r="5"/></g></svg>`,
+      // Geometric
+      `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><g stroke="rgba(245,223,160,0.85)" stroke-width="1.2" fill="none"><rect x="30" y="30" width="140" height="140" rx="4"/><rect x="50" y="50" width="100" height="100" rx="4"/><rect x="70" y="70" width="60" height="60" rx="4"/><rect x="85" y="85" width="30" height="30" rx="2"/><path d="M30 30 L170 170 M170 30 L30 170"/><path d="M100 30 L100 170 M30 100 L170 100"/><circle cx="30" cy="30" r="6" fill="rgba(245,223,160,0.4)"/><circle cx="170" cy="30" r="6" fill="rgba(245,223,160,0.4)"/><circle cx="30" cy="170" r="6" fill="rgba(245,223,160,0.4)"/><circle cx="170" cy="170" r="6" fill="rgba(245,223,160,0.4)"/><circle cx="100" cy="100" r="6" fill="rgba(245,223,160,0.4)"/></g></svg>`,
+      // Floral vine
+      `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><g stroke="rgba(245,223,160,0.85)" stroke-width="1.2" fill="none"><path d="M20 100 Q50 60 100 80 Q150 100 180 60"/><path d="M20 120 Q50 80 100 100 Q150 120 180 80"/><circle cx="100" cy="80" r="15"/><circle cx="100" cy="80" r="8"/><circle cx="100" cy="80" r="3" fill="rgba(245,223,160,0.5)"/><circle cx="50" cy="65" r="10"/><circle cx="50" cy="65" r="5"/><circle cx="150" cy="65" r="10"/><circle cx="150" cy="65" r="5"/><path d="M35 90 Q30 80 40 75 Q50 70 55 80"/><path d="M155 80 Q150 70 160 65 Q170 60 175 70"/><path d="M80 50 Q85 35 100 40 Q115 45 110 60"/></g></svg>`,
+      // Swirl/wave
+      `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><g stroke="rgba(245,223,160,0.85)" stroke-width="1.2" fill="none"><path d="M20 100 C40 60, 80 140, 100 100 C120 60, 160 140, 180 100"/><path d="M20 80 C40 40, 80 120, 100 80 C120 40, 160 120, 180 80"/><path d="M20 120 C40 80, 80 160, 100 120 C120 80, 160 160, 180 120"/><circle cx="100" cy="100" r="20"/><circle cx="100" cy="100" r="12"/><circle cx="100" cy="100" r="5" fill="rgba(245,223,160,0.5)"/><path d="M100 78 L104 90 L98 90 Z M100 122 L104 110 L98 110 Z M78 100 L90 96 L90 104 Z M122 100 L110 96 L110 104 Z"/></g></svg>`,
+      // Net pattern
+      `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><g stroke="rgba(245,223,160,0.85)" stroke-width="0.8" fill="none"><path d="M20 20 L180 180 M180 20 L20 180 M20 100 L180 100 M100 20 L100 180 M20 20 L180 20 M20 180 L180 180 M20 20 L20 180 M180 20 L180 180"/><path d="M20 60 L60 20 M20 140 L140 20 M60 180 L180 60 M140 180 L180 140"/><circle cx="100" cy="100" r="30"/><circle cx="100" cy="100" r="20"/><circle cx="100" cy="100" r="8" fill="rgba(245,223,160,0.3)"/><circle cx="20" cy="20" r="5" fill="rgba(245,223,160,0.4)"/><circle cx="180" cy="20" r="5" fill="rgba(245,223,160,0.4)"/><circle cx="20" cy="180" r="5" fill="rgba(245,223,160,0.4)"/><circle cx="180" cy="180" r="5" fill="rgba(245,223,160,0.4)"/></g></svg>`,
+      // Star mandala
+      `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><g stroke="rgba(245,223,160,0.85)" stroke-width="1.2" fill="none"><circle cx="100" cy="100" r="80"/><circle cx="100" cy="100" r="60"/><circle cx="100" cy="100" r="40"/><circle cx="100" cy="100" r="20"/><path d="M100 20 L110 80 L160 70 L115 100 L155 140 L100 115 L45 140 L85 100 L40 70 L90 80 Z"/><path d="M100 40 L107 75 L135 65 L112 90 L138 118 L100 100 L62 118 L88 90 L65 65 L93 75 Z" fill="rgba(245,223,160,0.08)"/></g></svg>`,
+    ];
+    return patterns[idx % patterns.length];
+  }
+
+  // =====================
+  // NAV TOGGLE
+  // =====================
+  function toggleNav() {
+    document.getElementById('navMenu').classList.toggle('open');
+  }
+
+  function closeNav() {
+    document.getElementById('navMenu').classList.remove('open');
+  }
+
+  function toggleDropdown(el) {
+    const li = el.parentElement;
+    li.classList.toggle('open');
+  }
+
+  // =====================
+  // FORM
+  // =====================
+  function submitForm() {
+    const name = document.getElementById('fname').value.trim();
+    const phone = document.getElementById('fphone').value.trim();
+    if (!name || !phone) {
+      alert('Please fill in your name and phone number.');
+      return;
+    }
+    document.getElementById('contactForm').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  }
+
+  // =====================
+  // SCROLL REVEAL
+  // =====================
+  function initReveal() {
+    setTimeout(() => {
+      const reveals = document.querySelectorAll('.section-reveal:not(.visible)');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            observer.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      reveals.forEach(r => observer.observe(r));
+    }, 100);
+  }
+
+  // Init on load
+  window.addEventListener('load', () => {
+    initReveal();
+  });
+
+  // Close nav on outside click
+  document.addEventListener('click', (e) => {
+    const nav = document.getElementById('navMenu');
+    const toggle = document.getElementById('navToggle');
+    if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+      nav.classList.remove('open');
+    }
+  });
+</script>
+</body>
+</html>
